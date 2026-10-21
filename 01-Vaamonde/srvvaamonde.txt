@@ -1,0 +1,129 @@
+#01_ Qual distribuição GNU/Linux estou usando?
+cat /etc/os-release
+
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+---
+
+#02_ Qual a versão do LSB que estou usando?
+cat /etc/lsb-release
+
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=26.04
+DISTRIB_CODENAME=resolute
+DISTRIB_DESCRIPTION="Ubuntu 26.04.1 LTS"
+---
+
+#03_ Qual o nome do meu servidor?
+hostnamectl
+
+Static hostname: srvvaamonde
+Icon name: computer-vm
+Chassis: vm
+Machine ID: da5939a724b14deabd695c7bd98847e8
+Boot ID: 64cfda5b7459484794654479b99ba9cf
+Virtualization: oracle
+Operating System: Ubuntu 26.04.1 LTS
+Kernel: Linux 7.0.0-38-generic
+Architecture: x86-64
+Hardware Vendor: innotek GmbH
+Hardware Model: VirtualBox
+Hardware Version: 1.2
+Firmware Version: VirtualBox
+Firmware Date: Fri 2006-12-01
+Firmware Age: 19y 10month 2w 6d
+---
+
+#04_ Qual versão de Kernel que estou usando?
+uname -a 
+
+Linux srvvaamonde 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:10:14 UTC 2026 x86_64 GNU/Linux
+---
+
+#05_ Qual a data e hora atual do servidor?
+timedatectl
+
+Local time: Wed 2026-10-21 17:49:00 UTC
+Universal time: Wed 2026-10-21 17:49:00 UTC
+RTC time: Wed 2026-10-21 17:44:05
+Time zone: Etc/UTC (UTC, +0000)
+System clock synchronized: yes
+NTP service: active
+RTC in local TZ: no
+---
+
+#06_ Informações detalhadas dos Endereços IP (IPv4/IPv6)
+resolvectl
+
+Global
+Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+resolv.conf mode: stub
+
+Link 2 (enp0s3)
+Current Scopes: DNS
+Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 8.8.4.4
+DNS Servers: 8.8.8.8 8.8.4.4
+DNS Domain: senac.br
+Default Route: yes
+---
+
+netplan status
+Online state: online
+    DNS Addresses: 127.0.0.53 (stub)
+       DNS Search: senac.br
+
+●  1: lo ethernet UNKNOWN/UP (unmanaged)
+      MAC Address: 00:00:00:00:00:00
+        Addresses: 127.0.0.1/8
+                   ::1/128
+
+●  2: enp0s3 ethernet UP (networkd: enp0s3)
+      MAC Address: 08:00:27:36:0b:fe (Intel Corporation)
+        Addresses: 10.24.69.200/24
+                   fe80::a00:27ff:fe36:bfe/64 (link)
+    DNS Addresses: 8.8.8.8
+                   8.8.4.4
+       DNS Search: senac.br
+           Routes: default via 10.24.69.1 (static)
+                   10.24.69.0/24 from 10.24.69.200 (link)
+                   fe80::/64 metric 256
+---
+
+#07_ Informações detalhadas dos Hard Disk (HD), Partições e utilizando dos Discos?
+
+#08_ Informações detalhadas da Memória RAM do servidor?
+
+#09_ Informações detalhadas do Processador do servidor?
+
+#10_ Levantamento de todos os softwares e versões instaladas no servidor?
+d...
+
+#11_ Levantamento de todos os softwares que precisam ser atualizados no servidor?
+a...
+
+#12_ Levantamento de todos os serviços rodando no servidor?
+s...
+
+#13_ Levantamento de todos os processos rodando no servidor?
+p...
+
+#14_ Levantamento de todos os usuários do servidor?
+/etc/
+
+#15_ Levantamento de todos os grupos do servidor?
+/etc/ 
+
+#16_ Levantamento de todas as conexões estabelecidas do servidor?
+n...
